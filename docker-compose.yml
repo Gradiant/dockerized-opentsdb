@@ -1,0 +1,11 @@
+version: '3'
+services:
+  opentsdb:
+    image: gradiant/opentsdb
+    environment:
+    - ZKQUORUM=zookeeper:2181
+    - ZKBASEDIR=/hbase
+    - TSDB_OPTS="--read-only"
+    - TSDB_PORT=4242
+  zookeeper:
+    image: zookeeper:3.4
