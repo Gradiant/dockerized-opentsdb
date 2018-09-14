@@ -25,7 +25,7 @@ RUN cd /opt/opentsdb-$VERSION && cp src/opentsdb.conf $TARGET$ETCDIR && \
     cp build/tsdb-2.3.1.jar $TARGET$WORKDIR && \
     cp build/tsdb $TARGET$WORKDIR/bin/ && \
     cp build/third_party/*/*.jar $TARGET$WORKDIR/libs/ && \
-    cp -rL build/staticroot/ $TARGET$WORKDIR/static && \
+    cp -rL build/staticroot/* $TARGET$WORKDIR/static && \
     cd $TARGET && tar -cvzf /docker-opentsdb.tgz .
 
 FROM openjdk:8u171-jre-alpine3.8
