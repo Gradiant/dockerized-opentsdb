@@ -3,7 +3,7 @@ This is a docker image of [OpenTSDB](http://opentsdb.net/) The Scalable Time Ser
 
 ## Properties
 
-- This image has a small footprint ( base docker image is openjdk:8u171-jre-alpine3.8).
+- This image has a small footprint ( base docker image is openjdk:8u212-jre-alpine3.9).
 
 
 ## Howto
@@ -11,7 +11,7 @@ This is a docker image of [OpenTSDB](http://opentsdb.net/) The Scalable Time Ser
 
 You can configure following properties through environment variables:
 
-- JAVA_OPTS. Default is "-Xms512m -Xmx2048m"
+- JVMARGS. For example to set JVM Memory "-Xms512m -Xmx2048m"
 - ZKQUORUM. Default is localhost:2181
 - ZKBASEDIR. Default is /hbase
 - TSDB_PORT. Default is 4242
